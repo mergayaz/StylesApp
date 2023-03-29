@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/btn_pressed"
+        android:state_pressed="true"/>
+
+    <item
+        android:drawable="@drawable/btn_round"/>
+
+</selector>
+
+<!--
+идёт ссылка на два изображения: одно изображение для нажатой кнопки, другое - для не нажатой
+также возможно создание ссылок и для других состояний (блокировка, фокус и активация)
+-->

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    данный макет стоится на основе простого дизайна (тема на основе AppCompat)
+    к каждой кнопке подключён XML файл btn.xml из папки drawable
+    данный файл содержит ссылку на два круглых изображения в той же папке
+    одно изображение для случая ненажатой кнопки (с серой рамкой для имитации тени)
+    другое изоражение для случая нажатой кнопки (без рамки), чтобы имитировать нажатие
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- в качестве background во все кнопки добавлен XML файл btn.xml из папки drawable -->
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/btn"
+                android:text="Button 4"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/btn5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/btn"
+                android:text="Button 5"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/btn6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/btn"
+                android:text="Button 6"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
